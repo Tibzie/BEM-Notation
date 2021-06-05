@@ -1,0 +1,65 @@
+
+
+@import './variables',
+'./mixins';
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 30px;
+    background-color: $form-background;
+    border: none;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    .input-boxes {
+        font-size: 15px;
+        &--modifier {
+            border: none;
+            background-color: $input-boxes;
+            padding: 10px 30px 10px 20px;
+            color: $box-colour;
+        }
+    }
+    &__row {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+        position: relative;
+    }
+    .eye-icon {
+        @include btn-props;
+        background: url('./assets/eye.png') center no-repeat;
+        transform: scale(.4);
+        height: 30px;
+        width: 50px;
+        position: absolute;
+        right: -10px;
+        top: 28px;
+    }
+    .btn {
+        @include btn-props;
+        margin: 20px 0;
+        padding: 10px 20px;
+        background: transparent;
+        border: 1px solid $button-bg-border-colour;
+        font-size: 1rem;
+        &:hover {
+            background: $button-bg-border-colour;
+        }
+    }
+    .link {
+        &--modifier {
+            color: $link-colour;
+            text-decoration: none;
+            &:hover {
+                color: $link-hover-colour;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.text--align {
+    text-align: center;
+}

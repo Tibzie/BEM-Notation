@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>BEM - contact form</title>
+</head>
+
+<body>
+    <form class="form">
+        <h1 class="form__heading text--align">Login</h1>
+
+        <div class="form__row">
+            <label for="name" class="font--w300">Name</label>
+            <input class="name input-boxes input-boxes--modifier" type="text" />
+        </div>
+
+        <div class="form__row">
+            <label for="password" class="font--w300">Password</label>
+            <input class="password input-boxes input-boxes--modifier" type="password" /> <input type="button"
+                class="eye-icon" />
+        </div>
+
+        <p class="text--align">Don't have a login? <a href="#" class="link link--modifier">Sign up</a></p>
+        <button class="btn font--w600">Login <i class="fas fa-sign-in-alt btn__icon"></i> </button>
+        <a href="#" class="link link--modifier" class="text--align">Forgot your password?</a>
+    </form>
+
+    <script>
+        const eyeBtn = document.querySelector('.eye-icon');
+        const passwBtn = document.querySelector('.password');
+
+        eyeBtn.addEventListener("click", () => {
+            if (passwBtn.type === "password") {
+                passwBtn.type = "text";
+            } else {
+                passwBtn.type = "password";
+            }
+        });
+    </script>
+</body>
+
+</html>
